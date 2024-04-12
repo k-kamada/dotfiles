@@ -72,6 +72,116 @@ vim.opt.rtp:prepend(lazypath)
 
 -- プラグインの設定
 require("lazy").setup({
+  -- Sidebar Tree
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup({
+        -- ここにnvim-tree.luaの設定を記述
+      view = {
+        width = 30,
+        side = left,
+      },
+      })
+      vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+    end,
+  },
+
+  -- Git Support
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require('gitsigns').setup()
+    end,
+  },
+
+  -- Parenthesis Control
+  {
+    'windwp/nvim-autopairs',
+     event = "InsertEnter",
+     config = true
+     -- use opts = {} for passing setup options
+     -- this is equalent to setup({}) function
+  },
+
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("telescope").setup({
+        defaults = {
+          prompt_prefix = "❯ ",
+          selection_caret = "❯ ",
+          mappings = {
+            i = {
+              ["<C-j>"] = "move_selection_next",
+              ["<C-k>"] = "move_selection_previous",
+            },
+          },
+        },
+        pickers = {
+          find_files = {
+            hidden = true,
+          },
+        },
+      })
+
+      -- キーマッピングの設定
+      local builtin = require("telescope.builtin")
+      vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+      vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+      vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+      vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+    end,
+  },
+
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup({
+        padding = true, --spaces before and after comment
+        sticky = true, --whether keep comment position or not
+        ignore = nil, --filetypes to ignore
+        mappings = {
+          basic = true,
+          extra = true,
+          extended = false,
+        },
+        pre_hook = nil,
+        post_hook = nil,
+      })
+      vim.api.nvim_set_keymap("n", "<C-_>", "<Plug>(comment_toggle_linewise_current)", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("v", "<C-_>", "<Plug>(comment_toggle_linewise_visual)", { noremap = true, silent = true })
+    end,
+  },
+
+  -- Status line
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  },
+
+  -- Tab line
+  {'romgrk/barbar.nvim',
+    dependencies = {
+      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+    },
+    init = function() vim.g.barbar_auto_setup = false end,
+    opts = {
+      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+      -- animation = true,
+      -- insert_at_start = true,
+      -- …etc.
+    },
+    version = '^1.0.0', -- optional: only update when a new 1.x version is released
+  },
+
   -- LSP関連のプラグイン
   {
     "neovim/nvim-lspconfig",
@@ -118,6 +228,10 @@ require("lazy").setup({
         }),
       })
     end,
+  },
+  {
+      "nvim-treesitter/nvim-treesitter",
+      build = ":TSUpdate",
   },
 })
 
