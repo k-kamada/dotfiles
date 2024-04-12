@@ -35,26 +35,51 @@ end
 -- File
 vim.opt.fileencoding = "utf-8"
 vim.opt.swapfile = false
+vim.opt.backup = false
 vim.opt.helplang = "ja"
 vim.opt.hidden = true
+
+-- Enable mouse Control
+vim.opt.mouse = "a"
 
 -- Set leader key to space
 vim.g.mapleader = ' '
 
 -- Line numbers
 vim.opt.number = true
+vim.opt.ruler = true
 
 -- Highlight current line
 vim.opt.cursorline = true
+
+-- Show invisible characters
+vim.opt.list = true
+vim.opt.listchars = {
+  tab = "▸ ",
+  trail = "·",
+  nbsp = "␣",
+  extends = "❯",
+  precedes = "❮",
+}
 
 -- Move by visual line
 vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
 vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
 
--- Insert blank spaces by TabKey
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+-- Indentation
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.formatoptions:remove("r")
+vim.opt.formatoptions:remove("o")
+
+-- Search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 
 -- lazy.nvim bootstrap
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -72,6 +97,16 @@ vim.opt.rtp:prepend(lazypath)
 
 -- プラグインの設定
 require("lazy").setup({
+  -- Colorscheme
+  {
+    "cocopon/iceberg.vim",
+    lazy = false, -- 遅延ロードを無効化
+    priority = 1000, -- 他のプラグインより先に読み込む
+    config = function()
+      vim.cmd([[colorscheme iceberg]])
+    end,
+  },
+
   -- Sidebar Tree
   {
     "nvim-tree/nvim-tree.lua",
@@ -307,3 +342,11 @@ require("lspconfig")["rust_analyzer"].setup({
     },
   },
 })
+
+-- Auto detect filetypes
+vim.cmd([[
+  filetype plugin indent on
+  syntax enable
+  autocmd FileType * set formatoptions-=ro
+]])
+
