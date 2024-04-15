@@ -23,15 +23,6 @@ vim.g.clipboard = {
   },
 }
 
--- file path separator
-if vim.fn.has('win32') == 1 then
-  -- Windows
-  vim.opt.shellslash = false
-else
-  -- Linux/Mac
-  vim.opt.shellslash = true
-end
-
 -- File
 vim.opt.fileencoding = "utf-8"
 vim.opt.swapfile = false
@@ -63,8 +54,8 @@ vim.opt.listchars = {
 }
 
 -- Move by visual line
-vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
-vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'j', 'gj', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true, silent = true })
 
 -- Indentation
 vim.opt.tabstop = 2
