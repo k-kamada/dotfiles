@@ -8,11 +8,32 @@
 // command palette
 {
   "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "ui_font_size": 15,
+  "buffer_font_size": 15,
   "theme": {
     "mode": "system",
     "light": "Atelier Lakeside Dark",
     "dark": "One Dark"
+  },
+  "cursor_blink": false,
+  "languages": {
+    "TypeScript": {
+      "language_servers": ["typescript-language-server", "!vtsls", "..."]
+    },
+    "TSX": {
+      "language_servers": ["typescript-language-server", "!vtsls", "..."]
+    },
+    "JavaScript": {
+      "language_servers": ["typescript-language-server", "!vtsls", "..."]
+    }
+  },
+  "lsp": {
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "strictNullChecks": true
+        }
+      }
+    }
   }
 }
