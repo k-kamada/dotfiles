@@ -16,6 +16,8 @@
     "dark": "One Dark"
   },
   "cursor_blink": false,
+  "show_wrap_guides": true,
+  "wrap_guides": [80],
   "tabs": {
     "git_status": true
   },
