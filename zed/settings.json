@@ -16,6 +16,9 @@
     "dark": "One Dark"
   },
   "cursor_blink": false,
+  "tabs": {
+    "git_status": true
+  },
   "inlay_hints": {
     "enabled": true,
     "show_type_hints": true,
@@ -33,6 +36,10 @@
     },
     "JavaScript": {
       "language_servers": ["typescript-language-server", "!vtsls", "..."]
+    },
+    "C++": {
+      "tab_size": 2,
+      "formatter": "language_server"
     }
   },
   "lsp": {
@@ -46,6 +53,11 @@
     "rust-analyzer": {
       "check": {
         "extraArgs": ["--target-dir", "target/ra"]
+      }
+    },
+    "biome": {
+      "settings": {
+        "require_config_file": true
       }
     }
   }
