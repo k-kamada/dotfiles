@@ -64,3 +64,10 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
+
+-- Auto detect filetypes
+vim.cmd([[
+  filetype plugin indent on
+  syntax enable
+  autocmd FileType * set formatoptions-=ro
+]])
