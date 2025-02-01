@@ -19,6 +19,14 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   -- Colorscheme
   {import="plugins.colorscheme"},
+  -- Syntax Highlighting
+  {import="plugins.nvim-treesitter"},
+  -- Chunk Highlighting
+  {import="plugins.hlchunk"},
+  -- Status line modifier
+  { import="plugins.lualine" },
+  -- Tab line modifier
+  {import="plugins.barbar"},
   -- NVim-Tree
   {import="plugins.nvim-tree"},
   -- Git Support
@@ -29,16 +37,10 @@ require("lazy").setup({
   {import="plugins.telescope"}, -- l-ff:find files, l-fb: find buffers
   -- Toggle Line Comment
   {import="plugins.comment"},
-  -- Status line modifier
-  {import="plugins.lualine"},
-  -- Tab line modifier
-  {import="plugins.barbar"},
   -- LSP
   {import="plugins.lsp"},
   -- Completion
   {import="plugins.nvim-cmp"},
-  -- Syntax Highlighting
-  {import="plugins.nvim-treesitter"},
-  -- Chunk Highlighting
-  {import="plugins.hlchunk"},
+  -- Object Manipulation
+  { import="plugins.treesj" },
 })
