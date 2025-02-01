@@ -42,5 +42,6 @@ require("lazy").setup({
   -- Completion
   {import="plugins.nvim-cmp"},
   -- Object Manipulation
-  { import="plugins.treesj" },
+  {import="plugins.treesj"},
+  {import="plugins.fidget"},
 })
