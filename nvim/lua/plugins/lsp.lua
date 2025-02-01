@@ -55,7 +55,11 @@ return {
       on_attach = on_attach,
       flags = lsp_flags,
     })
-    lspconfig.tsserver.setup({
+    lspconfig.tsserver.setup({ -- need to install via package manager: typescript-language-server
+      on_attach = on_attach,
+      flags = lsp_flags,
+    })
+    lspconfig.tailwindcss.setup({ -- need to install: npm install -g @tailwindcss/language-server
       on_attach = on_attach,
       flags = lsp_flags,
     })
