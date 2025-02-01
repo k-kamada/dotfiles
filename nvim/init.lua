@@ -42,6 +42,9 @@ require("lazy").setup({
   -- Completion
   {import="plugins.nvim-cmp"},
   -- Object Manipulation
-  {import="plugins.treesj"},
+  {import="plugins.treesj"}, -- <Leader>M : Toggle
+  -- Loading LSP Status
   {import="plugins.fidget"},
+  -- Show Outline Navigation
+  {import="plugins.aerial"}, -- <Leader>A : Toggle window
 })
