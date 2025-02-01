@@ -39,4 +39,6 @@ require("lazy").setup({
   {import="plugins.nvim-cmp"},
   -- Syntax Highlighting
   {import="plugins.nvim-treesitter"},
+  -- Chunk Highlighting
+  {import="plugins.hlchunk"},
 })
