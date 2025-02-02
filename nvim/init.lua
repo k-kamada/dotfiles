@@ -49,4 +49,6 @@ require("lazy").setup({
   {import="plugins.aerial"}, -- <Leader>A : Toggle window
   -- Formatter
   {import="plugins.conform"},
+  -- LLM Integration
+  {import="plugins.avante"},
 })
