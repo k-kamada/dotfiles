@@ -53,4 +53,6 @@ require("lazy").setup({
   {import="plugins.avante"},
   -- Code Jump
   {import="plugins.hop"},
+  -- Quickrun
+  {import="plugins.jaq-nvim"},
 })
