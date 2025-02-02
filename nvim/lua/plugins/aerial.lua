@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
+vim.keymap.set("n", "<leader>ae", "<cmd>AerialToggle!<CR>")
 
 return {
   'stevearc/aerial.nvim',

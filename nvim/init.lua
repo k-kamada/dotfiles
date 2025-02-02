@@ -51,4 +51,6 @@ require("lazy").setup({
   {import="plugins.conform"},
   -- LLM Integration
   {import="plugins.avante"},
+  -- Code Jump
+  {import="plugins.hop"},
 })
