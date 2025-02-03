@@ -55,7 +55,7 @@ return {
       on_attach = on_attach,
       flags = lsp_flags,
     })
-    lspconfig.tsserver.setup({ -- need to install via package manager: typescript-language-server
+    lspconfig.ts_ls.setup({ -- need to install via package manager: typescript-language-server
       on_attach = on_attach,
       flags = lsp_flags,
     })

@@ -7,7 +7,8 @@ return {
         require("nvim-tree").setup({
         -- ここにnvim-tree.luaの設定を記述
         view = {
-        width = 30,
+        --width = 30,
+        adaptive_size = true,
         side = left,
         },
         })

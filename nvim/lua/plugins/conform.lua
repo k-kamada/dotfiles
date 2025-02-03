@@ -13,10 +13,10 @@ return {
         typescript = js_formatters,
         typescriptreact = js_formatters,
       },
-      format_on_save = {
-        timeout_ms = 500,
-        lsp_format = "fallback",
-      },
+      -- format_on_save = {
+      --   timeout_ms = 500,
+      --   lsp_format = "fallback",
+      -- },
     })
   end
 }
