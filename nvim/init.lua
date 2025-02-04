@@ -55,4 +55,6 @@ require("lazy").setup({
   {import="plugins.hop"},
   -- Quickrun
   {import="plugins.jaq-nvim"},
+  -- Quickfix Window Preview
+  {import="plugins.nvim-bqf"},
 })
