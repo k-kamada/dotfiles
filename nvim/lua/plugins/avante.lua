@@ -54,6 +54,11 @@ return {
       wrap = true,        -- テキストの折り返し
       width = 30,         -- サイドバーの幅
       -- その他の詳細設定は省略
+      ask = {
+        floating = true,
+        start_insert = true,
+        border = "rounded",
+      },
     }
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
