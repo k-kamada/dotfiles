@@ -1,3 +1,4 @@
+pcall(require, "local")
 require("options")
 require("keymaps")
 
