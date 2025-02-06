@@ -19,7 +19,7 @@ return {
       model = "gemini-2.0-flash-thinking-exp",
       timeout = 30000,
       temperature = 0,
-      max_tokens = 4096,
+      max_tokens = 1000000,
     },
     deepseek = {
       endpoint = "https://api.deepseek.com",
@@ -28,7 +28,16 @@ return {
       temperature = 0,
       max_tokens = 4096,
     },
-    
+    vendors = {
+      ---@type AvanteProvider
+      ollama = {
+        __inherited_from = "openai",
+        api_key_name = "",
+        endpoint = "http://localhost:11434/v1",
+        model = "qwen2.5-coder:7b",
+        max_tokens = 128000,
+      },
+    },
     -- 動作設定
     behaviour = {
       auto_suggestions = false,
