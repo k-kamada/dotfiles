@@ -47,7 +47,7 @@ require("lazy").setup({
   -- Loading LSP Status
   {import="plugins.fidget"},
   -- Show Outline Navigation
-  {import="plugins.aerial"}, -- <Leader>A : Toggle window
+  {import="plugins.outline"}, -- <Leader>o : Toggle window
   -- Formatter
   {import="plugins.conform"},
   -- LLM Integration
