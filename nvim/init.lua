@@ -58,4 +58,6 @@ require("lazy").setup({
   {import="plugins.jaq-nvim"},
   -- Quickfix Window Preview
   {import="plugins.nvim-bqf"},
+  -- Highlighting Symbol under cursor
+  {import="plugins.illuminate"},
 })
