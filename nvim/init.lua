@@ -60,4 +60,6 @@ require("lazy").setup({
   {import="plugins.nvim-bqf"},
   -- Highlighting Symbol under cursor
   {import="plugins.illuminate"},
+  -- Show lsp info
+  {import="plugins.lsp_lines"},
 })
