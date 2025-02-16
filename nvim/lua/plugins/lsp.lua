@@ -89,6 +89,11 @@ return {
             procMacro = {
               enable = true,
             },
+            diagnostics = {
+              disabled = {
+                "unresolved-proc-macro",
+              },
+            },
         },
       },
     })
