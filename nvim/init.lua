@@ -61,5 +61,7 @@ require("lazy").setup({
   -- Highlighting Symbol under cursor
   {import="plugins.illuminate"},
   -- Show lsp info
-  {import="plugins.lsp_lines"},
+  {import="plugins.lsp_lines"}, -- <Leader>l : Toggle
+  -- Show Zed like toolwindow
+  {import="plugins.namu"},
 })
