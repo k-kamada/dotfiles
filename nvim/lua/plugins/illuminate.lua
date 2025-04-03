@@ -7,6 +7,7 @@ return {
         'treesitter',
         'regex',
       },
+      delay = 100,
       filetypes_denylist = {
         'dirbuf',
         'dirvish',
