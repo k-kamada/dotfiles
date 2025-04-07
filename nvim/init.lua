@@ -64,8 +64,6 @@ require("lazy").setup({
   {import="plugins.lsp_lines"}, -- <Leader>l : Toggle
   -- Show Zed like toolwindow
   {import="plugins.namu"}, -- <L>ss, <L>th
-  -- Start screen
-  {import="plugins.dashboard-nvim"},
   -- Breadcrumbs
   {import="plugins.dropbar"},
 })
