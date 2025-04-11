@@ -16,7 +16,7 @@ return {
     },
     gemini = {
       endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-      model = "gemini-2.0-flash-thinking-exp",
+      model = "gemini-2.5-pro-exp-03-25",
       timeout = 30000,
       temperature = 0,
       max_tokens = 1000000,
@@ -40,7 +40,7 @@ return {
     },
     -- 動作設定
     behaviour = {
-      auto_suggestions = false,
+      auto_suggestions = true,
       auto_set_highlight_group = true,
       auto_set_keymaps = true,
       auto_apply_diff_after_generation = false,
