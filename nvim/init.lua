@@ -51,7 +51,8 @@ require("lazy").setup({
   -- Formatter
   {import="plugins.conform"},
   -- LLM Integration
-  {import="plugins.avante"},
+  -- {import="plugins.avante"},
+  {import="plugins.copilot"},
   -- Code Jump
   {import="plugins.hop"},
   -- Quickrun
