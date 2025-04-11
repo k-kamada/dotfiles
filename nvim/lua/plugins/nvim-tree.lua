@@ -6,6 +6,10 @@ return {
     config = function()
       require("nvim-tree").setup({
         -- ここにnvim-tree.luaの設定を記述
+        hijack_directories = {
+          enable = true,
+          auto_open = false,
+        },
         view = {
           adaptive_size = true,
           side = left,

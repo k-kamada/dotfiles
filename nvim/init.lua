@@ -68,4 +68,6 @@ require("lazy").setup({
   {import="plugins.dropbar"},
   -- Mark files
   {import="plugins.harpoon"},
+  -- Terminal management
+  {import="plugins.toggleterm"},
 })
