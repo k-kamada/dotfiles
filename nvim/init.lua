@@ -33,7 +33,7 @@ require("lazy").setup({
   -- Git Support
   {import="plugins.gitsigns"},
   -- Parenthesis Control
-  {import="plugins.autopairs"},
+  {import="plugins.ultimate-autopair"},
   -- Find files in many contexts
   {import="plugins.telescope"}, -- l-ff:find files, l-fb: find buffers
   -- Toggle Line Comment
