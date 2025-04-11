@@ -66,4 +66,6 @@ require("lazy").setup({
   {import="plugins.namu"}, -- <L>ss, <L>th
   -- Breadcrumbs
   {import="plugins.dropbar"},
+  -- Mark files
+  {import="plugins.harpoon"},
 })
