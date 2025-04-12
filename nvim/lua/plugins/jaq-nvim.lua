@@ -16,6 +16,7 @@ return {
           go       = "go run %",
           sh       = "sh %",
           ocaml    = "ocaml %",
+          rust     = "cargo run %",
         }
       },
 

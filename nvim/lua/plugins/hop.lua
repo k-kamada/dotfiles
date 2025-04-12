@@ -1,6 +1,5 @@
-vim.keymap.set("n", "<leader><leader>e", "<cmd>HopWord<CR>")
-vim.keymap.set("n", "<leader><leader>c", "<cmd>HopChar1<CR>")
-vim.keymap.set("n", "<leader><leader>v", "<cmd>HopVertical<CR>")
+vim.keymap.set("n", "<leader>e", "<cmd>HopWord<CR>")
+vim.keymap.set("n", "<leader>v", "<cmd>HopVertical<CR>")
 
 return {
   'phaazon/hop.nvim',

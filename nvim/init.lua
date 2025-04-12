@@ -20,55 +20,60 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   -- Colorscheme
   {import="plugins.colorscheme"},
+
   -- Syntax Highlighting
   {import="plugins.nvim-treesitter"},
   -- Chunk Highlighting
   {import="plugins.hlchunk"},
+
   -- Status line modifier
   { import="plugins.lualine" },
   -- Tab line modifier
   {import="plugins.barbar"},
+
+  -- Breadcrumbs
+  {import="plugins.dropbar"},
+  -- Highlighting Symbol under cursor
+  {import="plugins.illuminate"},
+
   -- NVim-Tree
   {import="plugins.nvim-tree"},
   -- Git Support
-  {import="plugins.gitsigns"},
-  -- Parenthesis Control
-  {import="plugins.ultimate-autopair"},
+  {import="plugins.gitsigns"}, -- <C-g>l: Toggle linehl, <C-g>w: Toggle word_diff
   -- Find files in many contexts
   {import="plugins.telescope"}, -- l-ff:find files, l-fb: find buffers
+  -- Show Outline Navigation
+  {import="plugins.outline"}, -- <Leader>o : Toggle window
+
+  -- Quickfix Window Preview
+  {import="plugins.nvim-bqf"},
+  -- Terminal management
+  {import="plugins.toggleterm"},
+  -- Show Zed like toolwindow
+  {import="plugins.namu"}, -- <L>ss, <L>th
+  -- Mark files
+  {import="plugins.harpoon"}, -- <Leader>ha: Add file, <Leader>hp: Previous file, <Leader>hn: Next file
+
+  -- Parenthesis Control
+  {import="plugins.ultimate-autopair"},
   -- Toggle Line Comment
   {import="plugins.comment"},
+  -- Object Manipulation
+  {import="plugins.treesj"}, -- <Leader>M : Toggle
+  -- Code Jump
+  {import="plugins.hop"},
+
+  -- Quickrun
+  {import="plugins.jaq-nvim"},
+
   -- LSP
   {import="plugins.lsp"},
   -- Completion
   {import="plugins.nvim-cmp"},
-  -- Object Manipulation
-  {import="plugins.treesj"}, -- <Leader>M : Toggle
   -- Loading LSP Status
   {import="plugins.fidget"},
-  -- Show Outline Navigation
-  {import="plugins.outline"}, -- <Leader>o : Toggle window
-  -- Formatter
-  {import="plugins.conform"},
-  -- LLM Integration
-  -- {import="plugins.avante"},
-  {import="plugins.copilot"},
-  -- Code Jump
-  {import="plugins.hop"},
-  -- Quickrun
-  {import="plugins.jaq-nvim"},
-  -- Quickfix Window Preview
-  {import="plugins.nvim-bqf"},
-  -- Highlighting Symbol under cursor
-  {import="plugins.illuminate"},
   -- Show lsp info
   {import="plugins.lsp_lines"}, -- <Leader>l : Toggle
-  -- Show Zed like toolwindow
-  {import="plugins.namu"}, -- <L>ss, <L>th
-  -- Breadcrumbs
-  {import="plugins.dropbar"},
-  -- Mark files
-  {import="plugins.harpoon"},
-  -- Terminal management
-  {import="plugins.toggleterm"},
+  -- LLM Integration
+  {import="plugins.copilot"},
 })

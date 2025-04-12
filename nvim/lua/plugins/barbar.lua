@@ -14,8 +14,8 @@ return {
         noremap = true,
         silent = true,
       }
-      map('n', '<C-j>', '<Cmd>BufferPrevious<CR>', opts)
-      map('n', '<C-k>', '<Cmd>BufferNext<CR>', opts)
+      map('n', '<C-k>', '<Cmd>BufferPrevious<CR>', opts)
+      map('n', '<C-j>', '<Cmd>BufferNext<CR>', opts)
       map('n', '<Leader>c', '<Cmd>BufferClose<CR>', opts)
     end,
 }
