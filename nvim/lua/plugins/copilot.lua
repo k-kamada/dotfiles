@@ -2,13 +2,14 @@ return {
   "github/copilot.vim",
   lazy=false,
   config = function()
-    vim.g.copilot_no_tab_map = true,
+    -- Don't use tab for completion
+    vim.g.copilot_no_tab_map = true
     -- Accept
     vim.keymap.set('i', '<C-A>', 'copilot#Accept("\\<CR>")', {
      expr = true,
      replace_keycodes = false,
      desc = "Accept copilot suggestion",
-    }),
+    })
     -- Deny
     vim.keymap.set('i', '<C-E>', 'copilot#Dismiss()', {
      expr = true,

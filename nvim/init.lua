@@ -78,4 +78,5 @@ require("lazy").setup({
   {import="plugins.lsp_lines"}, -- <Leader>l : Toggle
   -- LLM Integration
   {import="plugins.copilot"},
+  {import="plugins.copilot-status"},
 })

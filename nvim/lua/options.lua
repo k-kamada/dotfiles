@@ -50,6 +50,9 @@ vim.opt.listchars = {
   precedes = "❮",
 }
 
+-- Hide mode line
+vim.opt.showmode = false
+
 -- Indentation
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
