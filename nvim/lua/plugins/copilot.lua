@@ -3,15 +3,27 @@ return {
   lazy=false,
   config = function()
     vim.g.copilot_no_tab_map = true,
-    vim.keymap.set('i', '<C-C>', 'copilot#Accept("\\<CR>")', {
-      expr = true,
-      replace_keycodes = false,
-      desc = "Accept copilot suggestion",
-    })
+    -- Accept
+    vim.keymap.set('i', '<C-A>', 'copilot#Accept("\\<CR>")', {
+     expr = true,
+     replace_keycodes = false,
+     desc = "Accept copilot suggestion",
+    }),
+    -- Deny
     vim.keymap.set('i', '<C-E>', 'copilot#Dismiss()', {
-      expr = true,
-      replace_keycodes = false,
-      desc = "Dismiss copilot suggestion",
+     expr = true,
+     replace_keycodes = false,
+     desc = "Dismiss copilot suggestion",
     })
-  end,
+    -- Toggle copilot
+    vim.keymap.set('n', '<C-C>', function()
+      if vim.g.copilot_enabled then
+        vim.g.copilot_enabled = false
+        print("Copilot disabled")
+      else
+        vim.g.copilot_enabled = true
+        print("Copilot enabled")
+      end
+    end, { desc = "Toggle Copilot" })
+  end
 }
