@@ -6,11 +6,11 @@ return {
      space2 = {
        enable = true,
      },
-     tabout = {
-       enable = true,
-       map='<tab>',
-       --cmap='<tab>',
-       hopout = true,
-     },
+     --tabout = {
+     --  enable = true,
+     --  map='<tab>',
+     --  --cmap='<tab>',
+     --  hopout = true,
+     --},
   },
 }

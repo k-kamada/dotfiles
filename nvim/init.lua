@@ -56,6 +56,8 @@ require("lazy").setup({
 
   -- Parenthesis Control
   {import="plugins.ultimate-autopair"},
+  -- Tabout
+  {import="plugins.tabout"}, -- <Tab> : Tabout, <S-Tab> : Backwards tabout
   -- Toggle Line Comment
   {import="plugins.comment"},
   -- Object Manipulation
