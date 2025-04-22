@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>e", "<cmd>HopWord<CR>")
+vim.keymap.set("n", "<leader>w", "<cmd>HopWord<CR>")
 vim.keymap.set("n", "<leader>v", "<cmd>HopVertical<CR>")
 
 return {
