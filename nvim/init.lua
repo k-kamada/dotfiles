@@ -71,6 +71,7 @@ require("lazy").setup({
   -- LSP
   {import="plugins.lsp"},
   {import="plugins.mason-lspconfig"},
+  {import="plugins.nvim-metals"}, -- Scala LSP
   -- Completion
   {import="plugins.nvim-cmp"},
   -- Loading LSP Status
