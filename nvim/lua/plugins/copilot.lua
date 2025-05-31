@@ -2,6 +2,8 @@ return {
   "github/copilot.vim",
   lazy=false,
   config = function()
+    -- Initial setup for Copilot
+    vim.g.copilot_enabled = false
     -- Don't use tab for completion
     vim.g.copilot_no_tab_map = true
     -- Accept
