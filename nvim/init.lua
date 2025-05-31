@@ -70,6 +70,7 @@ require("lazy").setup({
 
   -- LSP
   {import="plugins.lsp"},
+  {import="plugins.mason-lspconfig"},
   -- Completion
   {import="plugins.nvim-cmp"},
   -- Loading LSP Status

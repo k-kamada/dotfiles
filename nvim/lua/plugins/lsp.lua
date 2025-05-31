@@ -37,35 +37,11 @@ return {
     "williamboman/mason-lspconfig.nvim",
   },
   config = function()
-    require("mason").setup()
-    local lspconfig = require("lspconfig")
-    require("mason-lspconfig").setup_handlers({
-      function(server_name)
-        lspconfig[server_name].setup({
-          on_attach = on_attach,
-          flags = lsp_flags,
-        })
-      end,
-    })
-    -- LSPサーバーを登録する
-    local lsp_flags = {
-      debounce_text_changes = 150,
-    }
-    lspconfig.pyright.setup({
-      on_attach = on_attach,
-      flags = lsp_flags,
-    })
-    lspconfig.ts_ls.setup({ -- need to install via package manager: typescript-language-server
-      on_attach = on_attach,
-      flags = lsp_flags,
-    })
-    lspconfig.tailwindcss.setup({ -- need to install: npm install -g @tailwindcss/language-server
-      on_attach = on_attach,
-      flags = lsp_flags,
-    })
-    lspconfig.clangd.setup({
-      on_attach = on_attach,
-      flags = lsp_flags,
+    vim.lsp.enable('pyright')
+    vim.lsp.enable('ts_ls')
+    vim.lsp.enable('tailwindcss')
+    vim.lsp.enable('clangd')
+    vim.lsp.config('clangd', {
       cmd = {
         "clangd",
         "--background-index",
@@ -74,26 +50,24 @@ return {
         "--header-insertion=iwyu",
       },
     })
-    lspconfig.rust_analyzer.setup({
-      on_attach = on_attach,
-      flags = lsp_flags,
+    vim.lsp.enable('rust_analyzer')
+    vim.lsp.config('rust_analyzer', {
       settings = {
         ["rust-analyzer"] = {
-            assist = {
-              importGranularity = "module",
-              importPrefix = "self",
-            },
-            cargo = {
-              loadOutDirsFromCheck = true,
-            },
-            procMacro = {
-              enable = true,
-            },
-            diagnostics = {
-              disabled = {
-                "unresolved-proc-macro",
-              },
-            },
+          assist = {
+            importGranularity = "module",
+            importPrefix = "self",
+          },
+          cargo = {
+            loadOutDirsFromCheck = true,
+          },
+          procMacro = {
+            enable = true,
+          },
+          diagnostics = {
+            enable = true,
+            enbleExperimental = true,
+          },
         },
       },
     })
