@@ -39,7 +39,9 @@ return {
   config = function()
     vim.lsp.enable('pyright')
     vim.lsp.enable('ts_ls')
-    vim.lsp.enable('tailwindcss')
+    vim.lsp.enable('tailwindcss', {
+      cmd = { 'tailwindcss-language-server', '--stdio' },
+    })
     vim.lsp.enable('clangd')
     vim.lsp.config('clangd', {
       cmd = {
